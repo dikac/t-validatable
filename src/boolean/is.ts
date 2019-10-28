@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-import NotNull from "t-object/not-null";
+import NotNull from "t-object/boolean/not-null";
 
 
 export default function Is (value : any) : value is Validatable  {
