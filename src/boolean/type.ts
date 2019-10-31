@@ -1,10 +1,10 @@
 import Validatable from "../validatable";
-import NotNull from "t-object/boolean/not-null";
+import TypeObject from "t-object/boolean/type";
 
 
-export default function Is (value : any) : value is Validatable  {
+export default function Type (value : any) : value is Validatable  {
 
-    if(!NotNull<Validatable>(value)) {
+    if(!TypeObject<Validatable>(value)) {
 
         return false;
     }
