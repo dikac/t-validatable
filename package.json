@@ -1,6 +1,6 @@
 {
   "name": "t-validatable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typescript validatable",
   "dependencies": {
     "@types/node": "^12.12.3",
