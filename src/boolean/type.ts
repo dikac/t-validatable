@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-import TypeObject from "t-object/boolean/type";
+import TypeObject from "@dikac/t-object/boolean/type";
 
 
 export default function Type (value : any) : value is Validatable  {
