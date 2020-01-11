@@ -1,5 +1,5 @@
-import Type from "../../src/boolean/type";
-import Standard from "../../src/standard";
+import Type from "../../dist/boolean/type";
+import Standard from "../../dist/standard";
 
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});

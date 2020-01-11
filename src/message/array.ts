@@ -1,5 +1,5 @@
-import Message from "t-message/message";
-import Immutable from "t-value/immutable";
+import Message from "@dikac/t-message/message";
+import Immutable from "@dikac/t-value/immutable";
 import Validatable from "../validatable";
 
 export default class Array_<Type> implements Validatable, Message<string[]>, Immutable<Type> {

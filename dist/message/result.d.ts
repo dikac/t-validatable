@@ -1,6 +1,6 @@
 import Validatable from "../validatable";
-import Message from "t-message/message";
-import Immutable from "t-value/immutable";
+import Message from "@dikac/t-message/message";
+import Immutable from "@dikac/t-value/immutable";
 export default abstract class Result<Type> implements Validatable, Message, Immutable<Type> {
     readonly data: Type;
     readonly valid: boolean;
