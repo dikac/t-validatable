@@ -1,4 +1,6 @@
 import  Validatable from './validatable';
 
-const Valid : Validatable = {valid : false};
-export default Valid;
+export default function Invalid () : Validatable {
+
+    return {valid : false}
+};

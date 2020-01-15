@@ -9,7 +9,10 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const Valid = { valid: false };
-    exports.default = Valid;
+    function Invalid() {
+        return { valid: false };
+    }
+    exports.default = Invalid;
+    ;
 });
 //# sourceMappingURL=invalid.js.map

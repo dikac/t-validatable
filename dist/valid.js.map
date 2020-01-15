@@ -1,1 +1,1 @@
-{"version":3,"file":"valid.js","sourceRoot":"","sources":["../src/valid.ts"],"names":[],"mappings":";;;;;;;;;;;IAEA,MAAM,KAAK,GAAiB,EAAC,KAAK,EAAG,IAAI,EAAC,CAAC;IAC3C,kBAAe,KAAK,CAAC"}
+{"version":3,"file":"valid.js","sourceRoot":"","sources":["../src/valid.ts"],"names":[],"mappings":";;;;;;;;;;;IAGA,SAAwB,KAAK;QAEzB,OAAO,EAAC,KAAK,EAAG,IAAI,EAAC,CAAA;IACzB,CAAC;IAHD,wBAGC;IAAA,CAAC"}

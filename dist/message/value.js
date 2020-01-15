@@ -11,9 +11,9 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const result_1 = require("./result");
     class Type extends result_1.default {
-        constructor(data, check) {
-            super(data, check(data));
-            this.check = check;
+        constructor(data, validator) {
+            super(data, validator(data));
+            this.validator = validator;
         }
     }
     exports.default = Type;

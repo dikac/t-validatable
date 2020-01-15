@@ -1,3 +1,2 @@
 import Validatable from './validatable';
-declare const Valid: Validatable;
-export default Valid;
+export default function Valid(): Validatable;
