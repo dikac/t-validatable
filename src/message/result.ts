@@ -1,32 +1,23 @@
 import Validatable from "../validatable";
 import Message from "@dikac/t-message/message";
-import Immutable from "@dikac/t-value/immutable";
 
-export default abstract class Result<Type> implements Validatable, Message, Immutable<Type> {
+
+export default class Result<Type, M> implements Validatable, Message<M> {
 
     constructor(
-        readonly data : Type,
-        readonly valid : boolean = false
-    ) {
+        private validatable : Validatable,
+        private messageFactory : () => M
+    ) {}
+
+    get valid() : boolean {
+
+        return this.validatable.valid;
     }
 
-    get message() : string {
+    get message() : M {
 
-        return this.getMessage(this.data, this.valid);
-    }
-
-    protected abstract getMessage(data : any, valid : boolean) : string;
-
-    get value() : Type {
-
-        if(this.valid) {
-
-            return this.data;
-
-        } else {
-
-            throw new Error(this.message)
-        }
+        return this.messageFactory();
     }
 
 }
+

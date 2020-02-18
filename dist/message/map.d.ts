@@ -1,7 +1,7 @@
 import Validatable from "../validatable";
 import Message from "@dikac/t-message/message";
-import Immutable from "@dikac/t-value/immutable";
-export default class Map_<Type> implements Validatable, Message<Map<string, string>>, Immutable<Type> {
+import Value from "@dikac/t-value/value";
+export default class Map_<Type> implements Validatable, Message<Map<string, string>>, Readonly<Value<Type>> {
     private data;
     private results;
     readonly valids: Map<string, Validatable & Message<string>>;
