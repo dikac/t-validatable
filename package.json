@@ -6,7 +6,8 @@
     "@dikac/t-message": "^0.1.5",
     "@dikac/t-object": "^0.13.0",
     "@dikac/t-value": "^0.4.0",
-    "utility-types": "^3.10.0"
+    "utility-types": "^3.10.0",
+    "@dikac/deployer": "^0.1.4"
   },
   "devDependencies": {
     "@types/node": "^12.12.24",
@@ -28,7 +29,7 @@
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
     "compile": "tsc",
     "compile-watch": "tsc -w",
-    "release": "remove-json-properties dist/package.json private",
+    "release": "remove-json-properties dist/package.json private scripts.deploy dependencies.@dikac/deployer",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
     "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
