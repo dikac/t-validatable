@@ -4,21 +4,18 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../type-wrapper"], factory);
+        define(["require", "exports", "../wrapper"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const type_wrapper_1 = require("../type-wrapper");
-    class Type extends type_wrapper_1.default {
-        constructor(validatable, messageFactory) {
+    const wrapper_1 = require("../wrapper");
+    class Validatable extends wrapper_1.default {
+        constructor(validatable, message) {
             super(validatable);
-            this.messageFactory = messageFactory;
-        }
-        get message() {
-            return this.messageFactory(this.validatable.type);
+            this.message = message;
         }
     }
-    exports.default = Type;
+    exports.default = Validatable;
 });
-//# sourceMappingURL=type.js.map
+//# sourceMappingURL=validatable.js.map
