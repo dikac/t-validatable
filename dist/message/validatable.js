@@ -10,6 +10,9 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const wrapper_1 = require("../wrapper");
+    /**
+     * merge {@Link Validatable} and {@Link Message}
+     */
     class Validatable extends wrapper_1.default {
         constructor(validatable, message) {
             super(validatable);

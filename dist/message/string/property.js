@@ -9,9 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function default_1(type, property) {
-        return `property ${property} expect ${type}, `;
+    function Property(data) {
+        return `property '${data.property}' expect '${data.type}'`;
     }
-    exports.default = default_1;
+    exports.default = Property;
 });
 //# sourceMappingURL=property.js.map

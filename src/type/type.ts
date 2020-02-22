@@ -1,4 +1,4 @@
-import Validatable from "./validatable";
+import Validatable from "../validatable";
 
 export default interface Type extends Validatable {
 

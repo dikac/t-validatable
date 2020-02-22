@@ -9,9 +9,13 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function default_1(type, parameter) {
-        return `argument ${parameter} expect ${type}, `;
+    /**
+     * create string message suitable for function argument
+     * @param data
+     */
+    function Argument(data) {
+        return `argument '${data.parameter}' expect '${data.type}'`;
     }
-    exports.default = default_1;
+    exports.default = Argument;
 });
 //# sourceMappingURL=argument.js.map

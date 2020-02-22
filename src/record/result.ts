@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-import Record_ from "./record_";
+import Record from "./record";
 import Type from "../boolean/type";
 import TypeObject from "@dikac/t-object/boolean/type";
 import {DeepPartial} from "utility-types";
@@ -7,14 +7,14 @@ import Empty from "@dikac/t-object/boolean/empty";
 
 export default function Result<
     V extends Validatable = Validatable,
-    O extends Record_<V> = Record_<V>
+    O extends Record<V> = Record<V>
 >(record : O, valid : boolean) : DeepPartial<O> {
 
-    let result : Record_<V> = {};
+    let result : Record<V> = {};
 
     for(let property in record) {
 
-        const value : Record_<V> = <Record_<V>> record[property];
+        const value : Record<V> = <Record<V>> record[property];
 
         if(Type(value)) {
 
@@ -25,7 +25,7 @@ export default function Result<
 
         } else if(TypeObject(value)) {
 
-            const results = <Record_<V>> Result(value, valid);
+            const results = <Record<V>> Result(value, valid);
 
             if(!Empty(results)) {
 

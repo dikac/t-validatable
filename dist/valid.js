@@ -9,6 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * build valid {@link Validatable}
+     */
     function Valid() {
         return { valid: true };
     }

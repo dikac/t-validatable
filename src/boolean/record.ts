@@ -1,11 +1,11 @@
 import Validatable from "../validatable";
 import Valid from "../valid";
-import Record_ from "../record/record_";
+import Record from "../record/record";
 import Type from "./type";
 import TypeObject from "@dikac/t-object/boolean/type";
 
 
-export default function Record_(record : Record_) : boolean {
+export default function Record_(record : Record) : boolean {
 
     let valid : boolean = true;
 

@@ -1,8 +1,8 @@
-import TypeInterface from "../type";
+import TypeInterface from "../type/type";
 import Message from "@dikac/t-message/message";
-import TypeWrapper from "../type-wrapper";
+import Wrapper from "../type/wrapper";
 
-export default class Type<V extends TypeInterface, M> extends TypeWrapper<V> implements TypeInterface, Message<M> {
+export default class Type<V extends TypeInterface, M> extends Wrapper<V> implements TypeInterface, Message<M> {
 
     constructor(
         validatable : V,

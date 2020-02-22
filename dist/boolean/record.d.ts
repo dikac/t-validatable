@@ -1,2 +1,2 @@
-import Record_ from "../record/record_";
-export default function Record_(record: Record_): boolean;
+import Record from "../record/record";
+export default function Record_(record: Record): boolean;

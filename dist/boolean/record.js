@@ -4,12 +4,11 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../record/record_", "./type", "@dikac/t-object/boolean/type"], factory);
+        define(["require", "exports", "./type", "@dikac/t-object/boolean/type"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const record_1 = require("../record/record_");
     const type_1 = require("./type");
     const type_2 = require("@dikac/t-object/boolean/type");
     function Record_(record) {
@@ -20,7 +19,7 @@
                 valid = valid && value.valid;
             }
             else if (type_2.default(value)) {
-                valid = valid && record_1.default(value);
+                valid = valid && Record_(value);
             }
             else {
                 throw new Error(`property ${property} is not type of Validatable, or record of Validatable`);

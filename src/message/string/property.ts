@@ -1,4 +1,7 @@
-export default function (type : string, property : string) : string {
+import Type from "../../type/type";
+import Property from "@dikac/t-object/property/property";
 
-    return `property ${property} expect ${type}, `
+export default function Property<P extends string|number>(data : Type & Property<P>) : string {
+
+    return `property '${data.property}' expect '${data.type}'`
 }

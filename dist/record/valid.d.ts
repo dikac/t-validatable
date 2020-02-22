@@ -1,4 +1,4 @@
 import Validatable from "../validatable";
-import Record_ from "./record_";
+import Record from "./record";
 import { DeepPartial } from "utility-types";
-export default function Valid<V extends Validatable = Validatable, O extends Record_<V> = Record_<V>>(record: O): DeepPartial<O>;
+export default function Valid<V extends Validatable = Validatable, O extends Record<V> = Record<V>>(record: O): DeepPartial<O>;

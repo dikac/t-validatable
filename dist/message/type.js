@@ -4,13 +4,13 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../type-wrapper"], factory);
+        define(["require", "exports", "../type/wrapper"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const type_wrapper_1 = require("../type-wrapper");
-    class Type extends type_wrapper_1.default {
+    const wrapper_1 = require("../type/wrapper");
+    class Type extends wrapper_1.default {
         constructor(validatable, messageFactory) {
             super(validatable);
             this.messageFactory = messageFactory;
