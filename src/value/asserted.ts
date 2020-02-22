@@ -2,7 +2,7 @@ import Validatable from "../validatable";
 import ValueInterface from "@dikac/t-value/value";
 import Wrapper from "../wrapper";
 
-export default class Value<Val, Valid extends Validatable> extends Wrapper<Valid>  implements Readonly<ValueInterface<Val>>{
+export default class Asserted<Val, Valid extends Validatable> extends Wrapper<Valid>  implements Readonly<ValueInterface<Val>>{
 
     constructor(
         validatable : Valid,
