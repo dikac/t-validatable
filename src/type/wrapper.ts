@@ -1,4 +1,3 @@
-import Validatable from "../validatable";
 import Type from "./type";
 import ValidatableWrapper from "../wrapper";
 
