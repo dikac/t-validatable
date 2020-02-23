@@ -1,9 +1,8 @@
 {
   "name": "@dikac/t-validatable",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Typescript validatable",
   "dependencies": {
-    "@dikac/deployer": "^0.1.4",
     "@dikac/t-boolean": "^0.5.0",
     "@dikac/t-function": "^0.1.0",
     "@dikac/t-message": "^0.1.5",
@@ -31,12 +30,10 @@
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
     "compile": "tsc",
     "compile-watch": "tsc -w",
-    "release": "remove-json-properties dist/package.json private scripts.deploy dependencies.@dikac/deployer",
+    "release": "remove-json-properties dist/package.json private",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
-    "postinstall": "npm run deploy",
-    "deploy": "deployer /.git /dist /"
+    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
   },
   "private": true,
   "author": "",
