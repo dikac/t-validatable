@@ -9,10 +9,11 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class Standard {
-        constructor(valid = false) {
-            this.valid = valid;
-        }
+    /**
+     * create {@link Validatable} from {@param valid}
+     */
+    function Standard(valid) {
+        return { valid: valid };
     }
     exports.default = Standard;
 });

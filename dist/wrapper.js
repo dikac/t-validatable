@@ -9,12 +9,15 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * readonly wrapper for {@link Validatable}
+     */
     class Wrapper {
-        constructor(validatable) {
-            this.validatable = validatable;
+        constructor(subject) {
+            this.subject = subject;
         }
         get valid() {
-            return this.validatable.valid;
+            return this.subject.valid;
         }
     }
     exports.default = Wrapper;

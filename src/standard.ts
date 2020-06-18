@@ -1,11 +1,15 @@
 import  Validatable from './validatable';
 
-export default class Standard implements  Validatable  {
+/**
+ * create {@link Validatable} from {@param valid}
+ */
+export default function Standard<
+    Boolean extends boolean = boolean
+> (
+    valid : Boolean
+) : Validatable<Boolean> {
 
-    constructor(
-        public valid : boolean = false
-    ) {
-
-
-    }
+    return {valid : valid}
 }
+
+

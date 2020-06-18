@@ -1,15 +1,26 @@
 import Validatable from "./validatable";
+import Valid from "./infer/valid";
 
-export default class Wrapper<V extends Validatable> implements Readonly<Validatable>{
 
+/**
+ * readonly wrapper for {@link Validatable}
+ */
+
+export default class Wrapper<
+    Type extends Validatable
+> implements Readonly<
+    Validatable<Valid<Type>>
+>{
     constructor(
-        public validatable : V
+        public subject : Type
     ) {
 
     }
 
-    get valid() : boolean {
+    get valid() : Valid<Type> {
 
-        return this.validatable.valid;
+        return <Valid<Type>> this.subject.valid;
     }
 }
+
+

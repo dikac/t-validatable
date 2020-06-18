@@ -1,3 +1,3 @@
-export default interface Validatable {
-    readonly valid: boolean;
+export default interface Validatable<Valid extends boolean = boolean> {
+    valid: Valid;
 }

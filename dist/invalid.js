@@ -16,6 +16,5 @@
         return { valid: false };
     }
     exports.default = Invalid;
-    ;
 });
 //# sourceMappingURL=invalid.js.map

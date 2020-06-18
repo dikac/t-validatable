@@ -11,6 +11,9 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const type_1 = require("@dikac/t-object/boolean/type");
     const type_2 = require("@dikac/t-boolean/type");
+    /**
+     * return true if {@param value} is {@link Validatable} type, false otherwise
+     */
     function Type(value) {
         if (!type_1.default(value)) {
             return false;
