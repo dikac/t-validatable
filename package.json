@@ -8,7 +8,8 @@
     "@dikac/t-message": "git+file:///b:/t-message",
     "@dikac/t-object": "git+file:///b:/t-object",
     "@dikac/t-value": "git+file:///b:/t-value",
-    "utility-types": "^3.10.0"
+    "utility-types": "^3.10.0",
+    "@dikac/deployer": "^0.1.5"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",
@@ -34,7 +35,9 @@
     "release": "remove-json-properties dist/package.json private",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
+    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
+    "postinstall": "npm run deploy",
+    "deploy": "deployer /.git /dist /"
   },
   "private": true,
   "author": "",
