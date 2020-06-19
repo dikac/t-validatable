@@ -1,4 +1,3 @@
-import ValidatableStandard from "../../dist/standard";
 import WrapperMerge from "../../dist/message/wrapper-merge";
 import StdValue from "@dikac/t-value/standard";
 import StandardMessage from "@dikac/t-message/standard";
@@ -13,7 +12,7 @@ describe('construct', function () {
         let wrapper = new WrapperMerge(
             StdValue(1),
             new StandardMessage('message'),
-            ValidatableStandard(true),
+            {valid:true},
         );
 
         expect(wrapper.valid).toBeTrue()
@@ -29,7 +28,7 @@ describe('set', function () {
     it("data", () => {
         let value =  StdValue(1);
         let message = new StandardMessage('message');
-        let validatable =  ValidatableStandard<boolean>(true);
+        let validatable =  {valid:true};
         let wrapper = new WrapperMerge(value, message, validatable);
 
         value.value = 3;

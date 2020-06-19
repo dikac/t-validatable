@@ -1,5 +1,3 @@
-import ValidValue from "../../../../dist/valid";
-import InvalidValue from "../../../../dist/invalid";
 import Type from "../../../../dist/record/recursive/boolean/type";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -8,8 +6,8 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 describe('valid single dimension', function () {
 
     let record = {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid :  {valid:true},
+        invalid :  {valid:false},
     };
 
     let object : object = record;
@@ -34,8 +32,8 @@ describe('valid single dimension', function () {
 describe('invalid single dimension', function () {
 
     let record = {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid :  {valid:true},
+        invalid : {valid:false},
         wrong : 1
     };
 
@@ -54,19 +52,19 @@ describe('valid multi dimension', function () {
 
 
     let record = {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid :  {valid:true},
+        invalid : {valid:false},
         valids : {
-            valid1 : ValidValue(),
-            valid2 : ValidValue(),
+            valid1 :  {valid:true},
+            valid2 :  {valid:true},
         },
         invalids : {
-            invalid1 : InvalidValue(),
-            invalid2 : InvalidValue(),
+            invalid1 : {valid:false},
+            invalid2 : {valid:false},
         },
         mixed : {
-            valid : ValidValue(),
-            invalid : InvalidValue(),
+            valid :  {valid:true},
+            invalid : {valid:false},
         }
     };
 
@@ -103,19 +101,19 @@ describe('invalid multi dimension', function () {
 
 
     let record = {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid :  {valid:true},
+        invalid : {valid:false},
         valids : {
-            valid1 : ValidValue(),
-            valid2 : ValidValue(),
+            valid1 :  {valid:true},
+            valid2 : {valid:true},
         },
         invalids : {
-            invalid1 : InvalidValue(),
-            invalid2 : InvalidValue(),
+            invalid1 : {valid:false},
+            invalid2 : {valid:false},
         },
         mixed : {
-            valid : ValidValue(),
-            invalid : InvalidValue(),
+            valid :  {valid:true},
+            invalid : {valid:false},
             wrong : 2
         }
     };

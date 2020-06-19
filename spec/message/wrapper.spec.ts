@@ -1,8 +1,8 @@
 import Wrapper from "../../dist/message/wrapper";
 import WrapperMerge from "../../dist/message/wrapper-merge";
 import StdValue from "@dikac/t-value/standard";
-import ValidatableStandard from "../../dist/standard";
 import StandardMessage from "@dikac/t-message/standard";
+import Validatable from "../../dist/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -14,7 +14,7 @@ describe('construct', function () {
         let standard = new WrapperMerge(
             StdValue(1),
             new StandardMessage('message'),
-            ValidatableStandard(true),
+            {valid:true},
         );
 
         let wrapper = new Wrapper(standard);
@@ -34,7 +34,7 @@ describe('set', function () {
         let standard = new WrapperMerge(
             StdValue(1),
             new StandardMessage('message'),
-            ValidatableStandard<boolean>(true),
+            <Validatable<boolean>>{valid:true},
         );
 
         let wrapper = new Wrapper(standard);

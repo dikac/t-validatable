@@ -1,7 +1,7 @@
 import Callback from "../../dist/message/callback";
 import WrapperMerge from "../../dist/value/wrapper-merge";
-import StdValue from "@dikac/t-value/standard";
-import ValidatableStandard from "../../dist/standard";
+import Validatable from "../../dist/validatable";
+import Value from "@dikac/t-value/value";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -14,8 +14,8 @@ describe('construct', function () {
     it("data", () => {
 
         let standard = new WrapperMerge(
-            StdValue(1),
-            ValidatableStandard(true),
+            {value:1},
+            {valid:true},
         );
 
         let wrapper = new Callback(standard, TestMessage);
@@ -33,8 +33,8 @@ describe('set', function () {
     it("data", () => {
 
         let standard = new WrapperMerge(
-            StdValue<string|number>(1),
-            ValidatableStandard<boolean>(true),
+            <Value<string|number>>{value:1},
+            <Validatable<boolean>>{valid:true},
         );
 
         let wrapper = new Callback(standard, TestMessage);

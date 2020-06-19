@@ -1,5 +1,3 @@
-import ValidValue from "../../../dist/valid";
-import InvalidValue from "../../../dist/invalid";
 import Type from "../../../dist/record/boolean/type";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -8,8 +6,8 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 describe('valid', function () {
 
     let record = {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid : {valid:true},
+        invalid : {valid:false},
     };
 
     let object : object = record;
@@ -37,8 +35,8 @@ describe('valid', function () {
 describe('invalid', function () {
 
     let record = {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid : {valid:true},
+        invalid : {valid:false},
         wrong : 1
     };
 

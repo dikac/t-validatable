@@ -1,5 +1,3 @@
-import ValidValue from "../../../dist/valid";
-import InvalidValue from "../../../dist/invalid";
 import Invalid from "../../../dist/record/recursive/invalid";
 
 
@@ -7,19 +5,19 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 let record = {
 
-    valid : ValidValue(),
-    invalid : InvalidValue(),
+    valid :  {valid:true},
+    invalid :  {valid:false},
     valids : {
-        valid1 : ValidValue(),
-        valid2 : ValidValue(),
+        valid1 :  {valid:true},
+        valid2 :  {valid:true},
     },
     invalids : {
-        invalid1 : InvalidValue(),
-        invalid2 : InvalidValue(),
+        invalid1 :  {valid:false},
+        invalid2 :  {valid:false},
     },
     mixed : {
-        valid : ValidValue(),
-        invalid : InvalidValue(),
+        valid :  {valid:true},
+        invalid :  {valid:false},
     }
 };
 

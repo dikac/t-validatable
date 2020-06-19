@@ -1,5 +1,4 @@
 import Guard from "../dist/guard";
-import Standard from "../dist/standard";
 import Type from "../dist/boolean/type";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -10,7 +9,7 @@ describe("valid", function() {
 
     it("class", () =>{
 
-        let data = Standard(true);
+        let data = {valid:true};
         let guarded = Guard(data);
 
         expect(Type(guarded)).toBeTrue()

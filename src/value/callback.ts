@@ -1,6 +1,5 @@
 import Value from "@dikac/t-value/value";
 import WrapperMerge from "./wrapper-merge";
-import Standard from "../standard";
 import Validatable from "../validatable";
 
 /**
@@ -16,6 +15,6 @@ export default function Callback<
 
     return new WrapperMerge(
         value,
-        Standard(validation(value.value))
+        {valid : validation(value.value)}
     );
 }

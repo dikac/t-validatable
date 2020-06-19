@@ -1,5 +1,4 @@
 import Type from "../../dist/assert/type";
-import Standard from "../../dist/standard";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,7 +6,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 describe("valid", function() {
 
     it("class", () =>{
-        let data = Standard(true);
+        let data = {valid:true};
         expect(data.valid).toBeTrue()
     });
 

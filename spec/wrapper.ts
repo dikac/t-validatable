@@ -1,6 +1,4 @@
-import Valid from "../dist/valid";
 import Wrapper from "../dist/wrapper";
-import Invalid from "../dist/invalid";
 import Validatable from "../dist/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -9,7 +7,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 describe('valid', function () {
 
     it("valid", () => {
-        let wrapper = new Wrapper(Valid());
+        let wrapper = new Wrapper({valid:true});
         expect(wrapper.valid).toBeTrue();
     });
 
@@ -18,7 +16,7 @@ describe('valid', function () {
 describe('invalid', function () {
 
     it("invalid", () => {
-        let wrapper = new Wrapper(Invalid());
+        let wrapper = new Wrapper({valid:false});
         expect(wrapper.valid).toBeTrue();
     });
 
@@ -42,7 +40,7 @@ describe('compiler compliant', function () {
 
     it("invalid", () => {
 
-        let wrapper = new Wrapper(Invalid());
+        let wrapper = new Wrapper({valid:false});
         False(wrapper.valid);
         Boolean(wrapper.valid);
     });
@@ -50,14 +48,14 @@ describe('compiler compliant', function () {
 
     it("invalid", () => {
 
-        let wrapper = new Wrapper(Invalid());
+        let wrapper = new Wrapper({valid:false});
         False(wrapper.valid);
         Boolean(wrapper.valid);
     });
 
     it("invalid", () => {
 
-        let wrapper = new Wrapper<Validatable<boolean>>(Invalid());
+        let wrapper = new Wrapper<Validatable<boolean>>({valid:false});
         Boolean(wrapper.valid);
     });
 

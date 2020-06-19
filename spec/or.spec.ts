@@ -1,6 +1,4 @@
-import Valid from "../dist/valid";
 import Validatable from "../dist/validatable";
-import Invalid from "../dist/invalid";
 import Or from "../dist/or";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -85,12 +83,12 @@ describe("single", function() {
     describe('constructor', function () {
 
         it("true", () => {
-            let and = new Or<Validatable[]>([Valid()], false);
+            let and = new Or<Validatable[]>([{valid:true}], false);
             expect(and.valid).toBe(true)
         });
 
         it("false", () => {
-            let and = new Or<Validatable[]>([Invalid()], true);
+            let and = new Or<Validatable[]>([{valid:false}], true);
             expect(and.valid).toBe(false)
         });
     });
@@ -101,13 +99,13 @@ describe("single", function() {
 
         it("true", () => {
             and.initial = false;
-            and.subjects = [Valid()];
+            and.subjects = [{valid:true}];
             expect(and.valid).toBe(true)
         });
 
         it("false", () => {
             and.initial = true;
-            and.subjects = [Invalid()];
+            and.subjects = [{valid:false}];
             expect(and.valid).toBe(false)
         });
 
@@ -121,13 +119,13 @@ describe("multi same", function() {
 
     it("valids", () => {
         and.initial = false;
-        and.subjects = [Valid(), Valid()];
+        and.subjects = [{valid:true}, {valid:true}];
         expect(and.valid).toBe(true)
     });
 
     it("invalids", () => {
         and.initial = true;
-        and.subjects = [Invalid(), Invalid()];
+        and.subjects = [{valid:false}, {valid:false}];
         expect(and.valid).toBe(false)
     });
 })
@@ -139,13 +137,13 @@ describe("multi mixed", function() {
 
     it("valids", () => {
         and.initial = true;
-        and.subjects = [Valid(), Invalid()];
+        and.subjects = [{valid:true}, {valid:false}];
         expect(and.valid).toBe(true)
     });
 
     it("invalids", () => {
         and.initial = false;
-        and.subjects = [Valid(), Invalid()];
+        and.subjects = [{valid:true}, {valid:false}];
         expect(and.valid).toBe(true)
     });
 })
