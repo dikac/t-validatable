@@ -16,11 +16,14 @@
         /**
          * {@param subjects} multiple {@link Validatable} to be processed by subclass
          *
-         * {@param initial} is used if {@param subjects} is empty
+         * {@param defaults} is used if {@param subjects} is empty
          */
-        constructor(subjects, initial = true) {
+        constructor(subjects, defaults = true) {
             this.subjects = subjects;
-            this.initial = initial;
+            this.defaults = defaults;
+        }
+        [Symbol.iterator]() {
+            return this.subjects[Symbol.iterator]();
         }
     }
     exports.default = Compound;

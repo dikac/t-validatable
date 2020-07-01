@@ -3,7 +3,7 @@ import TypeObject from "@dikac/t-object/boolean/type";
 import TypeBoolean from "@dikac/t-boolean/type";
 
 /**
- * return true if {@param value} is {@link Validatable} type, false otherwise
+ * check if {@param value} is compatible to {@link Validatable} type
  */
 export default function Type<
     Assumption extends Validatable = Validatable

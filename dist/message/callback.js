@@ -16,7 +16,7 @@
             this.callback = callback;
         }
         get message() {
-            return this.callback(this.subject.value, this.subject.valid);
+            return this.callback(this.subject);
         }
     }
     exports.default = Callback;

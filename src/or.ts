@@ -1,5 +1,6 @@
 import Validatable from "./validatable";
 import Compound from "./compound";
+import FunctionOr from "./boolean/or";
 
 /**
  * Or operator for {@link Validatable}
@@ -10,18 +11,6 @@ export default class Or<
 
     get valid() : boolean {
 
-        let valid = this.initial;
-
-        for(let validatable of this.subjects) {
-
-            valid = validatable.valid;
-
-            if(valid) {
-
-                return true;
-            }
-        }
-
-        return valid;
+        return  FunctionOr(this.subjects, this.defaults);
     }
 }

@@ -5,8 +5,8 @@ import Value from "@dikac/t-value/value";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
-function TestMessage (value : any, valid : boolean) {
-    return 'type:' + typeof value + ', valid:' + (valid ? 'true' : 'false')
+function TestMessage (value : Validatable & Value) {
+    return 'type:' + typeof value.value + ', valid:' + (value.valid ? 'true' : 'false')
 }
 
 describe('construct', function () {

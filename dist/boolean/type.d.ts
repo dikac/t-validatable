@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
 /**
- * return true if {@param value} is {@link Validatable} type, false otherwise
+ * check if {@param value} is compatible to {@link Validatable} type
  */
 export default function Type<Assumption extends Validatable = Validatable>(value: any): value is Assumption;

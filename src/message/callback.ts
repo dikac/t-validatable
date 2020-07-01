@@ -11,16 +11,13 @@ export default class Callback<
 
     constructor(
         subject : Subject,
-        public callback : (value : ValueInfer<Subject>, valid : boolean) => Msg,
+        public callback : (value : Subject) => Msg,
     ) {
         super(subject);
     }
 
     get message () : Msg {
 
-        return this.callback(
-            <ValueInfer<Subject>>this.subject.value,
-            this.subject.valid
-        );
+        return this.callback(this.subject);
     }
 }

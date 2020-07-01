@@ -4,6 +4,9 @@ import Validatable from "../validatable";
 import ValueWrapperMerge from "../value/wrapper-merge";
 import Value from "@dikac/t-value/value";
 
+/**
+ * merge {@link Value}, {@link Message} and {@link Validatable}
+ */
 export default class WrapperMerge<
     Val extends Value,
     Msg extends Message,

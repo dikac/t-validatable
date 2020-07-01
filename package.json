@@ -3,13 +3,14 @@
   "version": "0.9.0",
   "description": "Typescript validatable",
   "dependencies": {
+    "@dikac/deployer": "^0.1.5",
     "@dikac/t-boolean": "git+file:///b:/t-boolean",
     "@dikac/t-function": "^0.1.0",
+    "@dikac/t-iterable": "git+file:///b:/t-iterable",
     "@dikac/t-message": "git+file:///b:/t-message",
     "@dikac/t-object": "git+file:///b:/t-object",
     "@dikac/t-value": "git+file:///b:/t-value",
-    "utility-types": "^3.10.0",
-    "@dikac/deployer": "^0.1.5"
+    "utility-types": "^3.10.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",

@@ -5,7 +5,6 @@ import Validatable from "../validatable";
 import Callback from "./callback";
 
 
-
 /**
  * same as {@link Callback} but with type
  */

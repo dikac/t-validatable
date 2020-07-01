@@ -4,20 +4,20 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../value/wrapper"], factory);
+        define(["require", "exports"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const wrapper_1 = require("../value/wrapper");
-    /**
-     * read only wrapper for {@link Message}, {@link Value} and {@link Validatable}
-     */
-    class Wrapper extends wrapper_1.default {
-        get message() {
-            return this.subject.message;
+    function And(validatables, defaults = true) {
+        for (let validatable of validatables) {
+            defaults = validatable.valid;
+            if (!defaults) {
+                return false;
+            }
         }
+        return defaults;
     }
-    exports.default = Wrapper;
+    exports.default = And;
 });
-//# sourceMappingURL=wrapper.js.map
+//# sourceMappingURL=and.js.map

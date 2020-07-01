@@ -1,5 +1,6 @@
 import Validatable from "./validatable";
 import Compound from "./compound";
+import FunctionAnd from "./boolean/and";
 
 /**
  * And operator for {@link Validatable}
@@ -8,18 +9,6 @@ export default class And<Arguments extends Iterable<Validatable>> extends Compou
 
     get valid() : boolean {
 
-        let valid = this.initial;
-
-        for(let validatable of this.subjects) {
-
-            valid = validatable.valid;
-
-            if(!valid) {
-
-                return false;
-            }
-        }
-
-        return valid;
+        return  FunctionAnd(this.subjects, this.defaults);
     }
 }

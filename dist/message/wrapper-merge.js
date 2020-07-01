@@ -10,6 +10,9 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const wrapper_merge_1 = require("../value/wrapper-merge");
+    /**
+     * merge {@link Value}, {@link Message} and {@link Validatable}
+     */
     class WrapperMerge extends wrapper_merge_1.default {
         constructor(subjectValue, subjectMessage, subjectValidatable) {
             super(subjectValue, subjectValidatable);

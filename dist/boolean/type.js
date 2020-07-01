@@ -12,7 +12,7 @@
     const type_1 = require("@dikac/t-object/boolean/type");
     const type_2 = require("@dikac/t-boolean/type");
     /**
-     * return true if {@param value} is {@link Validatable} type, false otherwise
+     * check if {@param value} is compatible to {@link Validatable} type
      */
     function Type(value) {
         if (!type_1.default(value)) {
