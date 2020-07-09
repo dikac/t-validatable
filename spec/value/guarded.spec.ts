@@ -1,5 +1,4 @@
 import Type from "@dikac/t-object/boolean/type";
-import StdValue from "@dikac/t-value/standard";
 import Guarded from "../../dist/value/guarded";
 import Callback from "../../dist/value/callback";
 
@@ -9,7 +8,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 describe('invalid', function () {
 
 
-    let subject = Callback(StdValue(1), Type);
+    let subject = Callback(1, Type);
     let callback = new Guarded(subject);
 
     it("check value", () => {
@@ -27,7 +26,7 @@ describe('invalid', function () {
 
 describe('valid', function () {
 
-    let subject = Callback(StdValue({}), Type);
+    let subject = Callback<{}>({}, Type);
     let callback = new Guarded(subject);
 
     it("check value", () => {

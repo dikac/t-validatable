@@ -1,13 +1,12 @@
 import CallbackType from "../../dist/value/callback-type";
 import Type from "@dikac/t-object/boolean/type";
-import StdValue from "@dikac/t-value/standard";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 
 describe('invalid', function () {
 
-    let callback = CallbackType(StdValue(1), Type);
+    let callback = CallbackType<any, object>(1, Type);
 
     it("data", () => {
         expect(callback.valid).toBeFalse()
@@ -19,7 +18,7 @@ describe('invalid', function () {
 
 describe('valid', function () {
 
-    let callback = CallbackType(StdValue({}), Type);
+    let callback = CallbackType({}, Type);
 
     it("data", () => {
         expect(callback.valid).toBeTrue()
@@ -30,22 +29,21 @@ describe('valid', function () {
 
 describe('compiler pass', function () {
 
-    function accept(object : object) {}
-    function string(string : string) {}
 
-    let callback = CallbackType(StdValue('string'), Type);
+
+    let callback = CallbackType<any, object>('string', Type);
 
     it("test", () => {
 
         if(callback.valid) {
 
-            accept(callback.value); // compiler pass
+            let object : object = callback.value; // compiler pass
             expect(callback.valid).toBeTrue()
             expect(callback.value).toEqual({})
 
         } else {
 
-            string(callback.value); // compiler pass
+            let string : string = callback.value; // compiler pass
             expect(callback.valid).toBeFalse()
             expect(typeof callback.value === "object").toBeFalse()
         }

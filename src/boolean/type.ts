@@ -1,6 +1,6 @@
 import Validatable from "../validatable";
 import TypeObject from "@dikac/t-object/boolean/type";
-import TypeBoolean from "@dikac/t-boolean/type";
+import TypeBoolean from "@dikac/t-boolean/guard/boolean";
 
 /**
  * check if {@param value} is compatible to {@link Validatable} type

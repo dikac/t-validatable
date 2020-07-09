@@ -11,7 +11,7 @@ import Property from "@dikac/t-object/property/property";
  */
 export default function Type<
     Object extends Record<Key, Validatable>,
-    Key extends Property = Property
+    Key extends PropertyKey
 >(
     record : any,
     property : (value : any) => value is Key = PropertyType

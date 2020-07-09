@@ -79,7 +79,7 @@ describe('valid multi dimension', function () {
 
     it('compiler pass', () => {
 
-        if(Type<typeof record>(object)) {
+        if(Type<typeof record, string>(object)) {
 
             expect(object.valid.valid).toBeTrue();
             expect(object.invalid.valid).toBeFalse();

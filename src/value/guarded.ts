@@ -18,11 +18,11 @@ export default class Guarded<
 
     /**
      * @param subject
-     * @param errorFactory
+     * @param error
      */
     constructor(
         subject : Instance,
-        public errorFactory : (value: any, subject : Instance) => Error = ThrowableType
+        public error : (value: any, subject : Instance) => Error = ThrowableType
     ) {
 
         super(subject);
@@ -32,7 +32,7 @@ export default class Guarded<
 
         if(!this.valid) {
 
-            throw this.errorFactory(this.subject.value, this.subject);
+            throw this.error(this.subject.value, this.subject);
         }
 
         return <ValueInfer<Instance>> this.subject.value;

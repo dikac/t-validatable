@@ -1,6 +1,5 @@
-import Wrapper from "../../dist/value/wrapper";
-import WrapperMerge from "../../dist/value/wrapper-merge";
-import StandardValue from "@dikac/t-value/standard";
+import Wrapper from "../../dist/value/readonly-wrapper";
+import WrapperMerge from "../../dist/value/readonly-merge";
 import Validatable from "../../dist/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -11,7 +10,7 @@ describe('construct', function () {
     it("data", () => {
 
         let standard = new WrapperMerge(
-            StandardValue(1),
+            {value:1},
             {valid:true}
         );
 
@@ -28,7 +27,7 @@ describe('set', function () {
 
     it("data", () => {
         let standard = new WrapperMerge(
-            StandardValue(1),
+            {value:1},
             <Validatable<boolean>>{valid:true}
         );
         let wrapper = new Wrapper(standard);

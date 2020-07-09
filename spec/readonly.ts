@@ -55,7 +55,7 @@ describe('compiler compliant', function () {
 
     it("invalid", () => {
 
-        let wrapper = new Readonly<Validatable<boolean>>(false);
+        let wrapper = new Readonly<boolean>(false);
         Boolean(wrapper.valid);
     });
 
