@@ -16,8 +16,8 @@ export default class ReadonlyMerge<
     Readonly<Value<ValueInfer<ValueType>>>
 {
     constructor(
-        public subjectValue : ValueType,
-        public subjectValidatable : ValidatableType,
+        protected subjectValue : ValueType,
+        protected subjectValidatable : ValidatableType,
     ) {
 
     }

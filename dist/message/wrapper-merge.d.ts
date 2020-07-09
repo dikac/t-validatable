@@ -7,7 +7,7 @@ import Value from "@dikac/t-value/value";
  * merge {@link Value}, {@link Message} and {@link Validatable}
  */
 export default class WrapperMerge<Val extends Value, Msg extends Message, Instance extends Validatable> extends ValueWrapperMerge<Val, Instance> implements Readonly<Message<InferMessage<Msg>>> {
-    subjectMessage: Msg;
+    protected subjectMessage: Msg;
     constructor(subjectValue: Val, subjectMessage: Msg, subjectValidatable: Instance);
     get message(): InferMessage<Msg>;
 }

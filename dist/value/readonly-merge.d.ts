@@ -6,8 +6,8 @@ import ValueInfer from "@dikac/t-value/infer/value";
  * readonly wrapper for {@link Validatable}
  */
 export default class ReadonlyMerge<ValueType extends Value, ValidatableType extends Validatable> implements Readonly<Validatable<ValidInfer<ValidatableType>>>, Readonly<Value<ValueInfer<ValueType>>> {
-    subjectValue: ValueType;
-    subjectValidatable: ValidatableType;
+    protected subjectValue: ValueType;
+    protected subjectValidatable: ValidatableType;
     constructor(subjectValue: ValueType, subjectValidatable: ValidatableType);
     get valid(): ValidInfer<ValidatableType>;
     get value(): ValueInfer<ValueType>;

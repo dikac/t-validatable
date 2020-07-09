@@ -19,7 +19,7 @@ implements
 
     constructor(
          subjectValue: Val,
-         public subjectMessage: Msg,
+         protected subjectMessage: Msg,
          subjectValidatable: Instance,
     ) {
         super(subjectValue, subjectValidatable)

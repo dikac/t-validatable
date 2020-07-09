@@ -12,7 +12,7 @@ export default class ReadonlyWrapper<
     Validatable<Valid<Type>>
 >{
     constructor(
-        public subject : Type
+        protected subject : Type
     ) {
 
     }
