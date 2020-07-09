@@ -1,8 +1,8 @@
 import Validatable from "../validatable";
 import Value from "@dikac/t-value/value";
 import ValueInfer from "@dikac/t-value/infer/value";
-import Wrapper from "./wrapper";
 import ThrowableType from "../throwable/type";
+import ReadonlyWrapper from "./readonly-wrapper";
 
 /**
  * @inheritDoc {@link Wrapper}
@@ -12,7 +12,7 @@ import ThrowableType from "../throwable/type";
  */
 export default class Guarded<
     Instance extends Validatable & Value = Validatable & Value
-> extends Wrapper<
+> extends ReadonlyWrapper<
     Instance
 > {
 

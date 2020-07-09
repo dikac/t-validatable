@@ -7,7 +7,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 describe('valid', function () {
 
     it("valid", () => {
-        let wrapper = new Readonly({valid:true});
+        let wrapper = new Readonly(true);
         expect(wrapper.valid).toBeTrue();
     });
 
@@ -16,7 +16,7 @@ describe('valid', function () {
 describe('invalid', function () {
 
     it("invalid", () => {
-        let wrapper = new Readonly({valid:false});
+        let wrapper = new Readonly(false);
         expect(wrapper.valid).toBeTrue();
     });
 
@@ -40,7 +40,7 @@ describe('compiler compliant', function () {
 
     it("invalid", () => {
 
-        let wrapper = new Readonly({valid:false});
+        let wrapper = new Readonly(false);
         False(wrapper.valid);
         Boolean(wrapper.valid);
     });
@@ -48,14 +48,14 @@ describe('compiler compliant', function () {
 
     it("invalid", () => {
 
-        let wrapper = new Readonly({valid:false});
+        let wrapper = new Readonly(false);
         False(wrapper.valid);
         Boolean(wrapper.valid);
     });
 
     it("invalid", () => {
 
-        let wrapper = new Readonly<Validatable<boolean>>({valid:false});
+        let wrapper = new Readonly<Validatable<boolean>>(false);
         Boolean(wrapper.valid);
     });
 

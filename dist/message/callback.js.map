@@ -1,1 +1,0 @@
-{"version":3,"file":"callback.js","sourceRoot":"","sources":["../../src/message/callback.ts"],"names":[],"mappings":";;;;;;;;;;;IAIA,8CAAuC;IAEvC,MAAqB,QAGnB,SAAQ,iBAAgB;QAEtB,YACI,OAAiB,EACV,QAAmC;YAE1C,KAAK,CAAC,OAAO,CAAC,CAAC;YAFR,aAAQ,GAAR,QAAQ,CAA2B;QAG9C,CAAC;QAED,IAAI,OAAO;YAEP,OAAO,IAAI,CAAC,QAAQ,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;QACvC,CAAC;KACJ;IAhBD,2BAgBC"}

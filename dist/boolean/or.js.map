@@ -1,1 +1,0 @@
-{"version":3,"file":"or.js","sourceRoot":"","sources":["../../src/boolean/or.ts"],"names":[],"mappings":";;;;;;;;;;;IAEA,SAAwB,EAAE,CAGtB,YAA2B,EAC3B,WAAqB,IAAI;QAGzB,KAAI,IAAI,WAAW,IAAI,YAAY,EAAE;YAEjC,QAAQ,GAAG,WAAW,CAAC,KAAK,CAAC;YAE7B,IAAG,QAAQ,EAAE;gBAET,OAAO,IAAI,CAAC;aACf;SACJ;QAED,OAAO,QAAQ,CAAC;IACpB,CAAC;IAlBD,qBAkBC"}
