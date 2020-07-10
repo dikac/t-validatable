@@ -41,12 +41,13 @@ import Message from "@dikac/t-message/message";
  */
 export default function Callback<
     Val,
-    Msg
+    Msg,
+    Return extends boolean = boolean
     >(
     value : Val,
-    validation : Function<[Val], boolean>,
-    messsage : Function<[Readonly<Value<Val>> & Readonly<Validatable>], Msg>,
-) : Readonly<Value<Val>> & Readonly<Validatable> & Readonly<Message<Msg>> {
+    validation : Function<[Val], Return>,
+    messsage : Function<[Readonly<Value<Val>> & Readonly<Validatable<Return>>], Msg>,
+) : Readonly<Value<Val>> & Readonly<Validatable<Return>> & Readonly<Message<Msg>> {
 
     let val = ValueCallback(value, validation);
     let callback = new MessageCallback(messsage, [val]);

@@ -5,24 +5,19 @@ import Call from "@dikac/t-boolean/validation/boolean/call";
 import Validation from "@dikac/t-boolean/validation/validation";
 
 export default class Callback<
-    Fn extends Function = Function<any[], boolean>,
-> implements Readonly<Validatable<ReturnType<Fn>>>, Argument<Parameters<Fn>>, Validation<Parameters<Fn>>
+    Arg extends any[],
+    Return extends boolean,
+> implements Readonly<Validatable<Return>>, Argument<Arg>, Validation<Arg, Return>
 {
     constructor(
-        public argument : Parameters<Fn>,
-        public validation : Fn,
+        readonly argument : Arg,
+        readonly validation : Function<Arg, Return>,
     ) {
     }
 
-    get valid () : ReturnType<Fn> {
+    get valid () : Return {
 
-        return <ReturnType<Fn>> Call(this);
+        return <Return> Call(this);
     }
-
-    // get argument() : Parameters<Fn> {
-    //
-    //     return this.subject.argument;
-    //
-    // }
 
 }

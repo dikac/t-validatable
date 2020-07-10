@@ -6,21 +6,19 @@ import ReadonlyMerge from "./readonly-merge";
 import Validation from "@dikac/t-boolean/validation/validation";
 import CallbackValidatable from "../callback";
 import Memoize from "../memoize";
+import Callback from "./callback";
 
 /**
  * use {@param validation} to populate {@link Validatable} data by passing {@param value} to
  * {@param validation}
  */
-export default function Callback<
+export default function CallbackFromObject<
     Val,
-    Return extends boolean = boolean,
+    Return extends boolean,
 >(
-    value : Val,
-    validation : Function<[Val], Return>
+    object : Value<Val> & Validation<[Val], Return>,
 ) : Readonly<Value<Val>> & Readonly<Validatable<Return>> {
 
-    let callback = new CallbackValidatable([value], validation);
-    let memoize = new Memoize(callback);
-
-    return new ReadonlyMerge({value : value}, memoize);
+    return Callback(object.value, object.validation);
 }
+
