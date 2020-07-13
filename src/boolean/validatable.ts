@@ -1,5 +1,5 @@
 import Validatable from "../validatable";
-import TypeObject from "@dikac/t-object/boolean/type";
+import TypeObject from "@dikac/t-object/boolean/object";
 import TypeBoolean from "@dikac/t-boolean/boolean";
 
 /**

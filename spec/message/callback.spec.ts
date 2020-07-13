@@ -1,7 +1,7 @@
 import Callback from "../../dist/message/callback";
 import Validatable from "../../dist/validatable";
 import Value from "@dikac/t-value/value";
-import Type from "@dikac/t-object/boolean/type";
+import Type from "@dikac/t-object/boolean/object";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

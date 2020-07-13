@@ -1,5 +1,5 @@
 import Callback from "../../dist/value/callback";
-import Type from "@dikac/t-object/boolean/type";
+import Type from "@dikac/t-object/boolean/object";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

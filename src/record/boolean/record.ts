@@ -1,7 +1,7 @@
 import Validatable from "../../validatable";
-import TypeRecord from "@dikac/t-object/record/boolean/type";
+import TypeRecord from "@dikac/t-object/record/boolean/record";
 import ValidatableType from "../../boolean/validatable";
-import PropertyType from "@dikac/t-object/key/boolean/type";
+import PropertyType from "@dikac/t-object/key/boolean/key";
 import Guard from "@dikac/t-function/boolean/guard";
 
 /**

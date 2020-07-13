@@ -1,4 +1,4 @@
-import Type from "@dikac/t-object/boolean/type";
+import Type from "@dikac/t-object/boolean/object";
 import Guarded from "../../dist/value/guarded";
 import Callback from "../../dist/value/callback";
 
