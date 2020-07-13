@@ -1,1 +1,0 @@
-{"version":3,"file":"validatable.js","sourceRoot":"","sources":["../../src/guard/validatable.ts"],"names":[],"mappings":";;;;;;;;;;;IACA,uDAAsD;IACtD,4DAAyD;IAEzD;;OAEG;IACH,SAAwB,WAAW,CAG/B,KAAW;QAGX,IAAG,CAAC,cAAU,CAAc,KAAK,CAAC,EAAE;YAEhC,OAAO,KAAK,CAAC;SAChB;QAED,IAAG,iBAAW,CAAC,KAAK,CAAC,KAAK,CAAC,EAAE;YAEzB,OAAO,IAAI,CAAC;SACf;QAED,OAAO,KAAK,CAAC;IACjB,CAAC;IAjBD,8BAiBC"}

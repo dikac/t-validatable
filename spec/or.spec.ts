@@ -1,6 +1,6 @@
 import Validatable from "../dist/validatable";
 import Or from "../dist/or";
-import Guard from "../dist/guard/validatable";
+import Guard from "../dist/boolean/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

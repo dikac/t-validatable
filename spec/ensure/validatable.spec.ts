@@ -1,5 +1,5 @@
 import Guard from "../../dist/ensure/validatable";
-import Type from "../../dist/guard/validatable";
+import Type from "../../dist/boolean/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

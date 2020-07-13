@@ -1,4 +1,4 @@
-import Type from "../../../dist/record/boolean/type";
+import Type from "../../../dist/record/boolean/record";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
