@@ -1,5 +1,4 @@
 import Readonly from "../dist/readonly";
-import Validatable from "../dist/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 

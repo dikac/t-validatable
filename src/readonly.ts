@@ -1,5 +1,4 @@
 import Validatable from "./validatable";
-import Valid from "./infer/valid";
 
 
 /**

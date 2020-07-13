@@ -2,7 +2,6 @@ import Validatable from "../validatable";
 import ValidInfer from "../infer/valid";
 import Value from "@dikac/t-value/value";
 import ValueInfer from "@dikac/t-value/infer/value";
-import InferValue from "@dikac/t-value/infer/value";
 
 /**
  * readonly wrapper for {@link Validatable}

@@ -4,12 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../throwable/type", "./readonly-wrapper"], factory);
+        define(["require", "exports", "../assert/throwable/validatable", "./readonly-wrapper"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const type_1 = require("../throwable/type");
+    const validatable_1 = require("../assert/throwable/validatable");
     const readonly_wrapper_1 = require("./readonly-wrapper");
     /**
      * @inheritDoc {@link Wrapper}
@@ -22,7 +22,7 @@
          * @param subject
          * @param error
          */
-        constructor(subject, error = type_1.default) {
+        constructor(subject, error = validatable_1.default) {
             super(subject);
             this.error = error;
         }

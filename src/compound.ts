@@ -6,7 +6,6 @@ import Value from "@dikac/t-iterable/infer/value";
  */
 export default abstract class  Compound<Validatables extends Iterable<Validatable>> implements Readonly<Validatable>, Iterable<Value<Validatables>> {
 
-
     /**
      * {@param subjects} multiple {@link Validatable} to be processed by subclass
      *
@@ -19,11 +18,9 @@ export default abstract class  Compound<Validatables extends Iterable<Validatabl
 
     }
 
-
     [Symbol.iterator]() : Iterator<Value<Validatables>> {
 
         return <Iterator<Value<Validatables>>> this.subjects[Symbol.iterator]();
-
     }
 
     abstract readonly valid: boolean;

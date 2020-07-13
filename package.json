@@ -10,7 +10,7 @@
     "@dikac/t-message": "git+file:///b:/t-message",
     "@dikac/t-object": "git+file:///b:/t-object",
     "@dikac/t-value": "git+file:///b:/t-value",
-    "utility-types": "^3.10.0"
+    "ts-toolbelt": "^6.12.1"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.11",

@@ -2,7 +2,6 @@ import ReadonlyMerge from "../../dist/value/readonly-merge";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
-
 describe('construct', function () {
 
     it("data", () => {
@@ -15,9 +14,7 @@ describe('construct', function () {
         expect(wrapper.valid).toBeTrue()
         expect(wrapper.value).toBe(1)
     });
-
 });
-
 
 describe('set', function () {
 
@@ -32,5 +29,4 @@ describe('set', function () {
         expect(wrapper.valid).toBeFalse()
         expect(wrapper.value).toBe(3)
     });
-
 });

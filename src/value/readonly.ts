@@ -1,7 +1,5 @@
 import Validatable from "../validatable";
 import Value from "@dikac/t-value/value";
-import InferValue from "@dikac/t-value/infer/value";
-import InferValid from "../infer/valid";
 import ValidatableReadonly from "../readonly";
 /**
  * read only wrapper for {@link Value} and {@link Validatable}

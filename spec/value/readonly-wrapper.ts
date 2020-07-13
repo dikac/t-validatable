@@ -4,7 +4,6 @@ import Validatable from "../../dist/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
-
 describe('construct', function () {
 
     it("data", () => {
@@ -27,13 +26,10 @@ describe('set', function () {
 
     it("data", () => {
         let standard = new WrapperMerge(
-            {value:1},
-            <Validatable<boolean>>{valid:true}
+            {value:3},
+            <Validatable<boolean>>{valid:false}
         );
         let wrapper = new Wrapper(standard);
-
-        standard.subjectValue.value = 3;
-        standard.subjectValidatable.valid = false;
 
         expect(wrapper.valid).toBeFalse()
         expect(wrapper.value).toBe(3)

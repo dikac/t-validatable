@@ -1,9 +1,9 @@
 import Validatable from "../../../validatable";
 import TypeRecord from "@dikac/t-object/record/recursive/boolean/type";
-import ValidatableType from "../../../boolean/type";
+import ValidatableType from "../../../boolean/validatable";
 import PropertyType from "@dikac/t-object/key/boolean/type";
 import Record from "@dikac/t-object/record/recursive/record";
-import Property from "@dikac/t-object/property/property";
+import Guard from "@dikac/t-function/boolean/guard";
 
 /**
  * Check if {@param record} is record of {@link Validatable}
@@ -14,7 +14,7 @@ export default function Type<
     Key extends PropertyKey
 >(
     record : any,
-    property : (value : any) => value is Key = PropertyType
+    property : Guard<any, Key> = PropertyType
 ) : record is Object {
 
     return TypeRecord(record, ValidatableType, property)

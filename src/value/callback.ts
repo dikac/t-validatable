@@ -1,9 +1,7 @@
 import Value from "@dikac/t-value/value";
 import Function from "@dikac/t-function/function";
-import ReadonlyWrapper from "./readonly-wrapper";
 import Validatable from "../validatable";
 import ReadonlyMerge from "./readonly-merge";
-import Validation from "@dikac/t-boolean/validation/validation";
 import CallbackValidatable from "../callback";
 import Memoize from "../memoize";
 

@@ -1,8 +1,9 @@
 import Validatable from "../validatable";
 import Value from "@dikac/t-value/value";
 import ValueInfer from "@dikac/t-value/infer/value";
-import ThrowableType from "../throwable/type";
+import ThrowableType from "../assert/throwable/validatable";
 import ReadonlyWrapper from "./readonly-wrapper";
+import Function from "@dikac/t-function/function";
 
 /**
  * @inheritDoc {@link Wrapper}
@@ -22,7 +23,7 @@ export default class Guarded<
      */
     constructor(
         subject : Instance,
-        public error : (value: any, subject : Instance) => Error = ThrowableType
+        public error : Function<[any, Instance], Error> = ThrowableType
     ) {
 
         super(subject);

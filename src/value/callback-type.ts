@@ -1,7 +1,7 @@
 import Value from "@dikac/t-value/value";
-import ValueInfer from "@dikac/t-value/infer/value";
 import Validatable from "../validatable";
 import Callback from "./callback";
+import Guard from "@dikac/t-function/boolean/guard";
 
 type Return<Argument, Valid> = (Readonly<Value<Valid>> & Readonly<Validatable<true>>) | (Readonly<Value<Argument>> & Readonly<Validatable<false>>);
 
@@ -13,7 +13,7 @@ export default function CallbackType<
     Valid extends Argument,
 >(
     value : Argument,
-    callback : (value : Argument) => value is Valid
+    callback : Guard<Argument,  Valid>
 ) : Return<Argument, Valid> {
 
     return <Return<Argument, Valid>> Callback(value, callback)

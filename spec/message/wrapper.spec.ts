@@ -30,16 +30,12 @@ describe('set', function () {
     it("data", () => {
 
         let standard = new WrapperMerge(
-            {value:1},
-            {message:'message'},
-            <Validatable<boolean>>{valid:true},
+            {value:3},
+            {message:'message 2'},
+            <Validatable<boolean>>{valid:false},
         );
 
         let wrapper = new Wrapper(standard);
-
-        standard.subjectValue.value = 3;
-        standard.subjectValidatable.valid = false;
-        standard.subjectMessage.message = 'message 2';
 
         expect(wrapper.valid).toBeFalse()
         expect(wrapper.value).toBe(3)

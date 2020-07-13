@@ -1,7 +1,6 @@
 import Validatable from "../validatable";
 import Value from "@dikac/t-value/value";
 import InferValue from "@dikac/t-value/infer/value";
-import Valid from "../infer/valid";
 import ReadonlyWrapperValidatable from "../readonly-wrapper";
 
 /**

@@ -3,7 +3,6 @@ import Type from "@dikac/t-object/boolean/type";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
-
 describe('invalid', function () {
 
     let callback = CallbackType<any, object>(1, Type);
@@ -15,7 +14,6 @@ describe('invalid', function () {
 
 });
 
-
 describe('valid', function () {
 
     let callback = CallbackType({}, Type);
@@ -26,10 +24,7 @@ describe('valid', function () {
     });
 });
 
-
 describe('compiler pass', function () {
-
-
 
     let callback = CallbackType<any, object>('string', Type);
 

@@ -1,6 +1,6 @@
 import And from "../dist/and";
 import Validatable from "../dist/validatable";
-import Type from "../dist/boolean/type";
+import Guard from "../dist/guard/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -137,7 +137,7 @@ describe("multi same", function() {
         for(let value of and) {
 
             number++;
-            expect(Type(value)).toBeTrue();
+            expect(Guard(value)).toBeTrue();
         }
 
         expect(number).toBe(2);
@@ -169,7 +169,7 @@ describe("multi mixed", function() {
         for(let value of and) {
 
             number++;
-            expect(Type(value)).toBeTrue();
+            expect(Guard(value)).toBeTrue();
         }
 
         expect(number).toBe(2);
