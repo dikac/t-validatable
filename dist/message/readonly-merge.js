@@ -13,7 +13,7 @@
     /**
      * merge {@link Value}, {@link Message} and {@link Validatable}
      */
-    class WrapperMerge extends readonly_merge_1.default {
+    class ReadonlyMerge extends readonly_merge_1.default {
         constructor(subjectValue, subjectMessage, subjectValidatable) {
             super(subjectValue, subjectValidatable);
             this.subjectMessage = subjectMessage;
@@ -22,6 +22,6 @@
             return this.subjectMessage.message;
         }
     }
-    exports.default = WrapperMerge;
+    exports.default = ReadonlyMerge;
 });
-//# sourceMappingURL=wrapper-merge.js.map
+//# sourceMappingURL=readonly-merge.js.map

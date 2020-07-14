@@ -1,5 +1,5 @@
 import Wrapper from "../../dist/message/readonly-wrapper";
-import WrapperMerge from "../../dist/message/wrapper-merge";
+import WrapperMerge from "../../dist/message/readonly-merge";
 import Validatable from "../../dist/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});

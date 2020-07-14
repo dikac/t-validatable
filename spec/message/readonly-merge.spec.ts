@@ -1,4 +1,4 @@
-import WrapperMerge from "../../dist/message/wrapper-merge";
+import WrapperMerge from "../../dist/message/readonly-merge";
 
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});

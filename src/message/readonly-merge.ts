@@ -7,7 +7,7 @@ import Value from "@dikac/t-value/value";
 /**
  * merge {@link Value}, {@link Message} and {@link Validatable}
  */
-export default class WrapperMerge<
+export default class ReadonlyMerge<
     Val extends Value,
     Msg extends Message,
     Instance extends Validatable,

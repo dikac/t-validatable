@@ -4,7 +4,7 @@ import Validatable from "../validatable";
 import ValueCallback from "../value/callback";
 import MessageCallback from "@dikac/t-message/callback";
 import Memoize from "@dikac/t-message/memoize";
-import WrapperMerge from "./wrapper-merge";
+import ReadonlyMerge from "./readonly-merge";
 import Message from "@dikac/t-message/message";
 
 /**
@@ -27,7 +27,7 @@ export default function Callback<
     let callback = new MessageCallback(message, [val]);
     let memoize = new Memoize(callback);
 
-    return new WrapperMerge(
+    return new ReadonlyMerge(
         val, memoize, val
     );
 
