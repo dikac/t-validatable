@@ -8,4 +8,4 @@ import Message from "@dikac/t-message/message";
  *
  * {@param message} is used to generate message
  */
-export default function Callback<Val, Msg, Return extends boolean = boolean>(value: Val, validation: Function<[Val], Return>, message: Function<[Readonly<Value<Val>> & Readonly<Validatable<Return>>], Msg>): Readonly<Value<Val>> & Readonly<Validatable<Return>> & Readonly<Message<Msg>>;
+export default function Callback<Val, Msg, Return extends boolean = boolean>(value: Val, validation: Function<[Val], Return>, message: Function<[Readonly<Value<Val> & Validatable<Return>>], Msg>): Readonly<Value<Val> & Validatable<Return> & Message<Msg>>;

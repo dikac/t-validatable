@@ -1,1 +1,1 @@
-export default function Validatable(number: unknown): Error;
+export default function Validatable(value: unknown): Error;

@@ -1,6 +1,6 @@
-import ValidatableMessage from "../string/validatable";
+import ValidatableMessage from "../../boolean/string/validatable";
 
-export default function Validatable(number : unknown) : Error {
+export default function Validatable(value : unknown) : Error {
 
-    return new Error(ValidatableMessage(number, false))
+    return new Error(ValidatableMessage(value, false))
 }

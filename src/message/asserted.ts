@@ -1,9 +1,10 @@
 import Validatable from "../validatable";
 import Value from "@dikac/t-value/value";
 import ValueInfer from "@dikac/t-value/infer/value";
-import ThrowableType from "../assert/throwable/validatable";
 import ReadonlyWrapper from "./readonly-wrapper";
 import Function from "@dikac/t-function/function";
+import Message from "@dikac/t-message/message";
+import ThrowableMessage from "@dikac/t-message/throwable/messsage";
 
 /**
  * @inheritDoc {@link ReadonlyWrapper}
@@ -11,8 +12,8 @@ import Function from "@dikac/t-function/function";
  * throw exception when {@link Validatable} is in valid (false) when
  * accessing value {@link Value}
  */
-export default class Guarded<
-    Instance extends Validatable & Value = Validatable & Value
+export default class Asserted<
+    Instance extends Validatable & Value & Message = Validatable & Value & Message
 > extends ReadonlyWrapper<
     Instance
 > {
@@ -23,7 +24,7 @@ export default class Guarded<
      */
     constructor(
         subject : Instance,
-        public error : Function<[any, Instance], Error> = ThrowableType
+        public error : Function<[Instance], Error> = ThrowableMessage
     ) {
 
         super(subject);
@@ -33,7 +34,7 @@ export default class Guarded<
 
         if(!this.valid) {
 
-            throw this.error(this.subject.value, this.subject);
+            throw this.error(this.subject);
         }
 
         return <ValueInfer<Instance>> this.subject.value;

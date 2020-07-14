@@ -20,8 +20,8 @@ export default function Callback<
     >(
     value : Val,
     validation : Function<[Val], Return>,
-    message : Function<[Readonly<Value<Val>> & Readonly<Validatable<Return>>], Msg>,
-) : Readonly<Value<Val>> & Readonly<Validatable<Return>> & Readonly<Message<Msg>> {
+    message : Function<[Readonly<Value<Val> & Validatable<Return>>], Msg>,
+) : Readonly<Value<Val> & Validatable<Return> & Message<Msg>> {
 
     let val = ValueCallback(value, validation);
     let callback = new MessageCallback(message, [val]);

@@ -4,15 +4,16 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../../boolean/string/validatable"], factory);
+        define(["require", "exports", "../string/valid", "@dikac/t-function/new"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const validatable_1 = require("../../boolean/string/validatable");
-    function Validatable(value) {
-        return new Error(validatable_1.default(value, false));
+    const valid_1 = require("../string/valid");
+    const new_1 = require("@dikac/t-function/new");
+    function Valid(object, throwable = new_1.default(Error)) {
+        return throwable(valid_1.default(object));
     }
-    exports.default = Validatable;
+    exports.default = Valid;
 });
-//# sourceMappingURL=validatable.js.map
+//# sourceMappingURL=valid.js.map

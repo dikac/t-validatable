@@ -4,35 +4,35 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../assert/throwable/validatable", "./readonly-wrapper"], factory);
+        define(["require", "exports", "./readonly-wrapper", "@dikac/t-message/throwable/messsage"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const validatable_1 = require("../assert/throwable/validatable");
     const readonly_wrapper_1 = require("./readonly-wrapper");
+    const messsage_1 = require("@dikac/t-message/throwable/messsage");
     /**
      * @inheritDoc {@link ReadonlyWrapper}
      *
      * throw exception when {@link Validatable} is in valid (false) when
      * accessing value {@link Value}
      */
-    class Guarded extends readonly_wrapper_1.default {
+    class Asserted extends readonly_wrapper_1.default {
         /**
          * @param subject
          * @param error
          */
-        constructor(subject, error = validatable_1.default) {
+        constructor(subject, error = messsage_1.default) {
             super(subject);
             this.error = error;
         }
         get value() {
             if (!this.valid) {
-                throw this.error(this.subject.value, this.subject);
+                throw this.error(this.subject);
             }
             return this.subject.value;
         }
     }
-    exports.default = Guarded;
+    exports.default = Asserted;
 });
-//# sourceMappingURL=guarded.js.map
+//# sourceMappingURL=asserted.js.map

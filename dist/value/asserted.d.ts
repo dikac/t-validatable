@@ -9,12 +9,12 @@ import Function from "@dikac/t-function/function";
  * throw exception when {@link Validatable} is in valid (false) when
  * accessing value {@link Value}
  */
-export default class Guarded<Instance extends Validatable & Value = Validatable & Value> extends ReadonlyWrapper<Instance> {
-    error: Function<[any, Instance], Error>;
+export default class Asserted<Instance extends Validatable & Value = Validatable & Value> extends ReadonlyWrapper<Instance> {
+    error: Function<[Instance], Error>;
     /**
      * @param subject
      * @param error
      */
-    constructor(subject: Instance, error?: Function<[any, Instance], Error>);
+    constructor(subject: Instance, error?: Function<[Instance], Error>);
     get value(): ValueInfer<Instance>;
 }

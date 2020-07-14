@@ -15,7 +15,7 @@ export default function Callback<
 >(
     value : Val,
     validation : Function<[Val], Return>
-) : Readonly<Value<Val>> & Readonly<Validatable<Return>> {
+) : Readonly<Value<Val> & Validatable<Return>> {
 
     let callback = new CallbackValidatable([value], validation);
     let memoize = new Memoize(callback);
