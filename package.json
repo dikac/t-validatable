@@ -1,28 +1,31 @@
 {
   "name": "@dikac/t-validatable",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Typescript validatable",
   "dependencies": {
-    "@dikac/t-boolean": "^0.5.0",
-    "@dikac/t-function": "^0.1.0",
-    "@dikac/t-message": "^0.1.5",
-    "@dikac/t-object": "^0.16.0",
-    "@dikac/t-value": "^0.4.0",
-    "utility-types": "^3.10.0"
+    "@dikac/deployer": "^0.1.5",
+    "@dikac/t-boolean": "^0.6.0",
+    "@dikac/t-function": "^0.4.0",
+    "@dikac/t-iterable": "^0.1.0",
+    "@dikac/t-message": "^0.5.2",
+    "@dikac/t-object": "^0.17.0",
+    "@dikac/t-value": "^0.7.0",
+    "ts-toolbelt": "^6.12.1"
   },
   "devDependencies": {
-    "@types/node": "^12.12.24",
-    "typescript": "^3.7.4",
-    "@types/jasmine": "^3.5.0",
-    "npm-run-all": "^4.1.5",
-    "json-properties-remover": "^0.1.2",
+    "@types/jasmine": "^3.5.11",
+    "@types/node": "^12.12.50",
+    "cpy-cli": "^3.1.1",
     "jasmine": "^3.4.0",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "json-properties-remover": "^0.1.2",
     "move-cli": "^1.2.1",
-    "cpy-cli": "^3.0.0",
-    "rimraf": "^3.0.0"
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.6"
   },
   "scripts": {
-    "spec-run": "jasmine --config=./jasmine.json",
+    "spec-run": "jasmine --reporter=jasmine-ts-console-reporter --config=./jasmine.json",
     "spec": "npm-run-all spec-compile spec-run",
     "spec-compile": "npm-run-all --parallel spec-compile-script ",
     "spec-compile-watch": "npm-run-all --parallel spec-compile-watch-script",
@@ -33,7 +36,9 @@
     "release": "remove-json-properties dist/package.json private",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
+    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
+    "postinstall": "npm run deploy",
+    "deploy": "deployer /.git /dist /"
   },
   "private": true,
   "author": "",

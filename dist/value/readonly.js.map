@@ -1,0 +1,1 @@
+{"version":3,"file":"readonly.js","sourceRoot":"","sources":["../../src/value/readonly.ts"],"names":[],"mappings":";;;;;;;;;;;IAEA,0CAA8C;IAC9C;;OAEG;IACH,MAAqB,QAGnB,SAAQ,kBAA0B;QAIhC,YACY,MAAY,EACpB,KAAa;YAEb,KAAK,CAAC,KAAK,CAAC,CAAC;YAHL,WAAM,GAAN,MAAM,CAAM;QAIxB,CAAC;QAED,IAAI,KAAK;YAEL,OAAO,IAAI,CAAC,MAAM,CAAC;QACvB,CAAC;KAEJ;IAnBD,2BAmBC"}
