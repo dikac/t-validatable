@@ -5,19 +5,19 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 let record = {
 
-    valid :  {valid:true},
-    invalid :  {valid:false},
+    valid : {valid:true},
+    invalid : {valid:false},
     valids : {
-        valid1 :  {valid:true},
-        valid2 :  {valid:true},
+        valid1 : {valid:true},
+        valid2 : {valid:true},
     },
     invalids : {
-        invalid1 :  {valid:false},
-        invalid2 :  {valid:false},
+        invalid1 : {valid:false},
+        invalid2 : {valid:false},
     },
     mixed : {
-        valid :  {valid:true},
-        invalid :  {valid:false},
+        valid : {valid:true},
+        invalid : {valid:false},
     }
 };
 
