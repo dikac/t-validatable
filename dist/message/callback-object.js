@@ -11,8 +11,11 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const callback_1 = require("./callback");
     /**
-     * use {@param validation} to populate {@link Validatable} data by passing {@param value} to
-     * {@param validation}
+     * {@link Callback} factory by using {@param object}
+     *
+     * {@link validation} is used as callback
+     * {@link Value} is used as value
+     * {@link Message} is used as message
      */
     function CallbackObject(object) {
         return callback_1.default(object.value, object.validation, object.message);

@@ -6,8 +6,11 @@ import Message from "@dikac/t-message/message";
 import Callback from "./callback";
 
 /**
- * use {@param validation} to populate {@link Validatable} data by passing {@param value} to
- * {@param validation}
+ * {@link Callback} factory by using {@param object}
+ *
+ * {@link validation} is used as callback
+ * {@link Value} is used as value
+ * {@link Message} is used as message
  */
 export default function CallbackObject<
     Val,

@@ -4,7 +4,7 @@ import ValueInfer from "@dikac/t-value/infer/value";
 import ReadonlyWrapper from "./readonly-wrapper";
 import Function from "@dikac/t-function/function";
 /**
- * @inheritDoc {@link Wrapper}
+ * @inheritDoc {@link ReadonlyWrapper}
  *
  * throw exception when {@link Validatable} is in valid (false) when
  * accessing value {@link Value}

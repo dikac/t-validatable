@@ -12,7 +12,7 @@
     const validatable_1 = require("../assert/throwable/validatable");
     const readonly_wrapper_1 = require("./readonly-wrapper");
     /**
-     * @inheritDoc {@link Wrapper}
+     * @inheritDoc {@link ReadonlyWrapper}
      *
      * throw exception when {@link Validatable} is in valid (false) when
      * accessing value {@link Value}

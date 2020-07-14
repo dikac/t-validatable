@@ -8,8 +8,10 @@ import WrapperMerge from "./wrapper-merge";
 import Message from "@dikac/t-message/message";
 
 /**
- * use {@param validation} to populate {@link Validatable} data by passing {@param value} to
- * {@param validation}
+ * use {@param validation} to populate {@link Validatable} data by passing {@param value}
+ * to {@param validation}
+ *
+ * {@param message} is used to generate message
  */
 export default function Callback<
     Val,
@@ -18,11 +20,11 @@ export default function Callback<
     >(
     value : Val,
     validation : Function<[Val], Return>,
-    messsage : Function<[Readonly<Value<Val>> & Readonly<Validatable<Return>>], Msg>,
+    message : Function<[Readonly<Value<Val>> & Readonly<Validatable<Return>>], Msg>,
 ) : Readonly<Value<Val>> & Readonly<Validatable<Return>> & Readonly<Message<Msg>> {
 
     let val = ValueCallback(value, validation);
-    let callback = new MessageCallback(messsage, [val]);
+    let callback = new MessageCallback(message, [val]);
     let memoize = new Memoize(callback);
 
     return new WrapperMerge(

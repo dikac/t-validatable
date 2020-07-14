@@ -4,8 +4,10 @@ import Validation from "@dikac/t-boolean/validation/validation";
 import Callback from "./callback";
 
 /**
- * use {@param validation} to populate {@link Validatable} data by passing {@param value} to
- * {@param validation}
+ * {@link Callback} factory by using {@param object}
+ *
+ * {@link validation} is used as callback
+ * {@link Value} is used as value
  */
 export default function CallbackFromObject<
     Val,
