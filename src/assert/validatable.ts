@@ -10,8 +10,8 @@ import Function from "@dikac/t-function/function";
 export default function Validatable<
     Assumption extends Validatable = Validatable
 >(
-    value : any,
-    errorFactory : Function<[any], Error> = ThrowableType
+    value : unknown,
+    errorFactory : Function<[unknown], Error> = ThrowableType
 ) : asserts value is Assumption {
 
     if(!ValidatableType(value)) {

@@ -28,6 +28,6 @@ export default class ReadonlyMerge<
 
     get value() : ValueInfer<ValueType> {
 
-        return  this.subjectValue.value;
+        return <ValueInfer<ValueType>> this.subjectValue.value;
     }
 }

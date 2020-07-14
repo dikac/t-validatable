@@ -3,7 +3,7 @@ import Argument from "@dikac/t-function/argument/argument";
 import Validation from "@dikac/t-boolean/validation/validation";
 import Callback from "./callback";
 
-export default function CallbackObject<
+export default function CallbackFromObject<
     Arg extends any[],
     Return extends boolean
 >(
