@@ -1,5 +1,5 @@
 import Validatable from "./validatable";
-import Infer from "./infer/valid";
+import Infer from "./boolean/boolean";
 import ObjectProperty from "@dikac/t-object/value/property";
 import ValueMemoize from "@dikac/t-value/memoize";
 

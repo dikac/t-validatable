@@ -9,9 +9,5 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function Boolean(validatable) {
-        return validatable.valid;
-    }
-    exports.default = Boolean;
 });
 //# sourceMappingURL=boolean.js.map

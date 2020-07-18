@@ -1,5 +1,5 @@
 import Validatable from "./validatable";
-import Valid from "./infer/valid";
+import Boolean from "./boolean/boolean";
 
 
 /**
@@ -9,7 +9,7 @@ import Valid from "./infer/valid";
 export default class ReadonlyWrapper<
     Type extends Validatable
 > implements Readonly<
-    Validatable<Valid<Type>>
+    Validatable<Boolean<Type>>
 >{
     constructor(
         protected subject : Type
@@ -17,9 +17,9 @@ export default class ReadonlyWrapper<
 
     }
 
-    get valid() : Valid<Type> {
+    get valid() : Boolean<Type> {
 
-        return <Valid<Type>> this.subject.valid;
+        return <Boolean<Type>> this.subject.valid;
     }
 }
 

@@ -1,6 +1,8 @@
 import Validatable from "../validatable";
 
-export default function Boolean<Bool extends boolean>(validatable : Validatable<Bool>) : Bool {
+/**
+ * {@link Boolean} valid value type
+ */
+type Boolean<Instance> = Instance extends Validatable<infer As> ? As : never;
 
-    return <Bool> validatable.valid;
-}
+export default Boolean;
