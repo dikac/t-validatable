@@ -1,12 +1,12 @@
 {
   "name": "@dikac/t-validatable",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "description": "Typescript validatable",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-boolean": "^0.7.3",
-    "@dikac/t-function": "^0.8.2",
-    "@dikac/t-object": "^0.20.0",
+    "@dikac/t-boolean": "^0.7.4",
+    "@dikac/t-function": "^0.9.1",
+    "@dikac/t-object": "^0.22.0",
     "@dikac/t-value": "^0.8.9",
     "ts-toolbelt": "^6.13.11"
   },
