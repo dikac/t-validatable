@@ -1,19 +1,19 @@
 {
   "name": "@dikac/t-validatable",
-  "version": "0.17.2",
+  "version": "0.17.3",
   "description": "Typescript validatable",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-boolean": "^0.7.6",
+    "@dikac/t-boolean": "^0.8.0",
     "@dikac/t-function": "^0.10.0",
     "@dikac/t-object": "^0.26.0",
-    "@dikac/t-value": "^0.8.12",
+    "@dikac/t-value": "^0.9.1",
     "ts-toolbelt": "^6.13.28"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.11",
     "cpy-cli": "^3.1.1",
-    "jasmine": "^3.6.0",
+    "jasmine": "^3.6.1",
     "jasmine-ts-console-reporter": "^3.1.1",
     "json-properties-remover": "^0.1.2",
     "mkdirp": "^1.0.4",
