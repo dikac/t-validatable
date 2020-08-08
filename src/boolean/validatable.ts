@@ -1,5 +1,4 @@
 import Validatable from "../validatable";
-import TypeObject from "@dikac/t-object/boolean/object";
 import TypeBoolean from "@dikac/t-boolean/boolean";
 
 /**
@@ -8,15 +7,11 @@ import TypeBoolean from "@dikac/t-boolean/boolean";
 export default function Validatable<
     Assumption extends Validatable = Validatable
 >(
-    value : any
+    value : object
 ) : value is Assumption  {
 
-    if(!TypeObject<Validatable>(value)) {
 
-        return false;
-    }
-
-    if(TypeBoolean(value.valid)) {
+    if(TypeBoolean((value as Validatable).valid)) {
 
         return true;
     }

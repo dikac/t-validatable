@@ -1,7 +1,7 @@
 import Validatable from "./validatable";
 import Infer from "./boolean/infer";
-import ObjectProperty from "@dikac/t-object/value/property";
 import ValueMemoize from "@dikac/t-value/memoize";
+import Value from "@dikac/t-value/value";
 
 /**
  * Wrap {@link Validatable} and cache its value
@@ -10,17 +10,20 @@ import ValueMemoize from "@dikac/t-value/memoize";
  */
 export default class Memoize<
     Container extends Validatable
-    > implements
+> implements
     Readonly<Validatable<Infer<Container>>>
 {
-    public memoize : ValueMemoize<ObjectProperty<'valid', Container>>;
+    public memoize : ValueMemoize<Readonly<Value<Infer<Container>>>>;
 
     constructor(
         public subject : Container
     ) {
 
-        let value = new ObjectProperty(subject, 'valid');
-        this.memoize = new ValueMemoize(value);
+        this.memoize = new ValueMemoize(<Readonly<Value<Infer<Container>>>>{
+            get value () {
+                return subject.valid;
+            },
+        });
     }
 
 

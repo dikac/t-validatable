@@ -86,7 +86,7 @@ describe("invalid", function() {
 
     it("class", () => {
 
-        let data = String('a');
+        let data = new String('a');
         expect(Type(data)).toBeFalse();
 
     });
