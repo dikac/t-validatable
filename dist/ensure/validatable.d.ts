@@ -1,7 +1,6 @@
 import Validatable from "../validatable";
-import Function from "@dikac/t-function/function";
 /**
  * Throw exception if given value is no {@link Validatable} type
  *
  */
-export default function Validatable<Assumption extends Validatable = Validatable>(value: object, errorFactory?: Function<[object], Error>): Assumption;
+export default function Validatable<Assumption extends Validatable = Validatable>(value: object, errorFactory?: (value: object) => Error): Assumption;
