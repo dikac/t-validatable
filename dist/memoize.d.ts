@@ -3,6 +3,7 @@ import Infer from "./boolean/infer";
 import ValueMemoize from "@dikac/t-value/memoize";
 import Value from "@dikac/t-value/value";
 /**
+ * @deprecated
  * Wrap {@link Validatable} and cache its value
  *
  * suitable to cached value from heave operation

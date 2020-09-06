@@ -11,6 +11,7 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const memoize_1 = require("@dikac/t-value/memoize");
     /**
+     * @deprecated
      * Wrap {@link Validatable} and cache its value
      *
      * suitable to cached value from heave operation

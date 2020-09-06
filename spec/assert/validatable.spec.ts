@@ -2,16 +2,23 @@ import Validatable from "../../dist/assert/validatable";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
+class Test {
+    constructor(public valid : boolean) {
+    }
+}
+
 describe("valid", function() {
 
     it("class", () =>{
-        let data = {valid:true};
-        expect(data.valid).toBeTrue()
+
+        let data = new Test(true);
+        expect(Validatable(data)).toBeUndefined()
     });
 
     it("object", () => {
+
         let object = { valid : true};
-        expect(object.valid).toBeTrue();
+        expect(Validatable(object)).toBeUndefined();
     });
 
     it("getter", () => {
@@ -23,13 +30,13 @@ describe("valid", function() {
         }
         let data = new Getter;
 
-        expect(data.valid).toBeTrue()
+        expect(Validatable(data)).toBeUndefined()
     });
 
 
     it("getter + setter", () => {
 
-        class Getter {
+        class GetterSetter {
             get valid () : boolean {
                 return true;
             }
@@ -37,15 +44,8 @@ describe("valid", function() {
             }
         }
 
-        expect((new Getter).valid).toBeTrue()
+        expect(Validatable(new GetterSetter)).toBeUndefined()
     });
-
-    it("plain object", () => {
-
-        let data = { valid :  true};
-        expect(data.valid).toBeTrue();
-    });
-
 });
 
 

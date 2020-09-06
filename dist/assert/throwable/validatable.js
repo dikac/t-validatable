@@ -4,14 +4,14 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../../boolean/string/validatable"], factory);
+        define(["require", "exports", "../string/validatable"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const validatable_1 = require("../../boolean/string/validatable");
-    function Validatable(value) {
-        return new Error(validatable_1.default(value, false));
+    const validatable_1 = require("../string/validatable");
+    function Validatable(value, subject = '') {
+        return new Error(validatable_1.default(false, value, subject));
     }
     exports.default = Validatable;
 });

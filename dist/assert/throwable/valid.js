@@ -4,23 +4,15 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+        define(["require", "exports", "../string/valid"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    /**
-     * @deprecated
-     * readonly wrapper for {@link Validatable}
-     */
-    class Readonly {
-        constructor(_valid) {
-            this._valid = _valid;
-        }
-        get valid() {
-            return this._valid;
-        }
+    const valid_1 = require("../string/valid");
+    function Valid(string, subject = '', conversion = value => typeof value) {
+        return new Error(valid_1.default(string, subject, conversion));
     }
-    exports.default = Readonly;
+    exports.default = Valid;
 });
-//# sourceMappingURL=readonly.js.map
+//# sourceMappingURL=valid.js.map

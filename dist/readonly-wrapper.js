@@ -10,6 +10,7 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
+     * @deprecated
      * readonly wrapper for {@link Validatable}
      */
     class ReadonlyWrapper {

@@ -9,6 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * @deprecated
+     */
     function Create(valid) {
         return {
             valid: valid

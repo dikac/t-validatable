@@ -1,5 +1,6 @@
 import Validatable from "./validatable";
 /**
+ * @deprecated
  * readonly wrapper for {@link Validatable}
  */
 export default class Readonly<Type extends boolean> implements globalThis.Readonly<Validatable<Type>> {

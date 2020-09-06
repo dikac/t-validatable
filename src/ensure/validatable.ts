@@ -7,14 +7,12 @@ import Validatable from "../validatable";
  *
  */
 
-export default function Validatable<
-    Assumption extends Validatable = Validatable
->(
+export default function Validatable(
     value : object,
     errorFactory : (value:object)=>Error = ThrowableType
-) : Assumption {
+) : Validatable {
 
-    AssertType<Assumption>(value, errorFactory)
+    AssertType(value, errorFactory)
 
     return value;
 }
