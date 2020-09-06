@@ -4,11 +4,9 @@ import TypeBoolean from "@dikac/t-boolean/boolean";
 /**
  * check if {@param value} is compatible to {@link Validatable} type
  */
-export default function Validatable<
-    Assumption extends Validatable = Validatable
->(
+export default function Validatable(
     value : object
-) : value is Assumption  {
+) : value is Validatable  {
 
 
     if(TypeBoolean((value as Validatable).valid)) {

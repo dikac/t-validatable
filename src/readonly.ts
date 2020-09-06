@@ -1,6 +1,5 @@
 import Validatable from "./validatable";
 
-
 /**
  * readonly wrapper for {@link Validatable}
  */

@@ -10,7 +10,7 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     function Invalid(validatable) {
-        return validatable.valid === false;
+        return !validatable.valid;
     }
     exports.default = Invalid;
 });

@@ -1,8 +1,8 @@
 import Validatable from "../validatable";
 import Infer from "./infer";
 
-export type Extend<ValidatableT extends Validatable, Elevate extends Infer<ValidatableT>> = {
-    [Key in keyof ValidatableT]: Key extends 'valid' ? Elevate : ValidatableT[Key];
+export type Extend<ValidatableType extends Validatable, Elevate extends Infer<ValidatableType>> = {
+    [Key in keyof ValidatableType]: Key extends 'valid' ? Elevate : ValidatableType[Key];
 };
 
 export default Extend;

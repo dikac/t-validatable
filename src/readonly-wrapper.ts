@@ -1,7 +1,6 @@
 import Validatable from "./validatable";
 import Infer from "./boolean/infer";
 
-
 /**
  * readonly wrapper for {@link Validatable}
  */
