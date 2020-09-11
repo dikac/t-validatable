@@ -1,17 +1,19 @@
 import Value from "@dikac/t-value/value";
 import Name from "@dikac/t-object/string/name";
 import Validatable from "../../validatable";
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import Sentence from "@dikac/t-string/message/sentence";
 
 export default function Valid<ValidatableType extends Validatable>(
     validatable: ValidatableType,
-    subject : string = '',
     conversion : (object : ValidatableType) => string = Name,
 ) : string {
 
-    let sentence = SentencesIs(validatable.valid);
-    sentence.subject.push(subject, conversion(validatable));
-    sentence.object = ['valid'];
+    let sentence = new Sentence(validatable.valid);
+
+    sentence.subject = conversion(validatable);
+    sentence.reject = 'is not';
+
+    sentence.expect = 'valid';
 
     return sentence.message;
 }

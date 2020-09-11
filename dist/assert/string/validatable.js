@@ -4,12 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-string/message/sentences-is", "@dikac/t-object/string/name"], factory);
+        define(["require", "exports", "@dikac/t-string/message/sentences", "@dikac/t-object/string/name"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const sentences_is_1 = require("@dikac/t-string/message/sentences-is");
+    const sentences_1 = require("@dikac/t-string/message/sentences");
     const name_1 = require("@dikac/t-object/string/name");
     /**
      * string intended for empty object
@@ -19,10 +19,11 @@
      * @param subject
      */
     function Validatable(valid, value, subject = '') {
-        const sentence = sentences_is_1.default(valid);
-        sentence.subject.push(subject);
-        sentence.subject.push(name_1.default(value));
-        sentence.object = ['Validatable compatible'];
+        let sentence = new sentences_1.default(valid);
+        sentence.subject.push(subject, `"${name_1.default(value)}"`);
+        sentence.reject.push('is not compatible with');
+        sentence.accept.push('is compatible with');
+        sentence.expect.push('Validatable type');
         return sentence.message;
     }
     exports.default = Validatable;

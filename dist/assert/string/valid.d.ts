@@ -1,2 +1,2 @@
 import Validatable from "../../validatable";
-export default function Valid<ValidatableType extends Validatable>(validatable: ValidatableType, subject?: string, conversion?: (object: ValidatableType) => string): string;
+export default function Valid<ValidatableType extends Validatable>(validatable: ValidatableType, conversion?: (object: ValidatableType) => string): string;

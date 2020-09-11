@@ -1,4 +1,4 @@
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import Sentences from "@dikac/t-string/message/sentences";
 import Name from "@dikac/t-object/string/name";
 /**
  * string intended for empty object
@@ -14,10 +14,10 @@ export default function Validatable(
     subject : string = '',
 ) : string {
 
-    const sentence = SentencesIs(valid);
-
-    sentence.subject.push(subject);
-    sentence.subject.push(Name(value));
-    sentence.object = ['Validatable compatible'];
+    let sentence = new Sentences(valid);
+    sentence.subject.push(subject, `"${Name(value)}"`);
+    sentence.reject.push('is not compatible with');
+    sentence.accept.push('is compatible with');
+    sentence.expect.push('Validatable type');
     return sentence.message;
 }
