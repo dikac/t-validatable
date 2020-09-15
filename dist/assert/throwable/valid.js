@@ -10,8 +10,8 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const valid_1 = require("../string/valid");
-    function Valid(string, subject = '', conversion = value => typeof value) {
-        return new Error(valid_1.default(string, subject, conversion));
+    function Valid(string, conversion = value => typeof value) {
+        return new Error(valid_1.default(string, conversion));
     }
     exports.default = Valid;
 });
