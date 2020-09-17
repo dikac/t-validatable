@@ -1,1 +1,1 @@
-{"version":3,"file":"valid.js","sourceRoot":"","sources":["../../src/boolean/valid.ts"],"names":[],"mappings":";;;;;;;;;;;IAEA,SAAwB,KAAK,CAAiC,WAAwB;QAElF,OAAO,WAAW,CAAC,KAAK,KAAK,IAAI,CAAC;IACtC,CAAC;IAHD,wBAGC"}
+{"version":3,"file":"valid.js","sourceRoot":"","sources":["../../src/boolean/valid.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,OAAO,UAAU,KAAK,CAAiC,WAAwB;IAElF,OAAO,WAAW,CAAC,KAAK,KAAK,IAAI,CAAC;AACtC,CAAC"}
