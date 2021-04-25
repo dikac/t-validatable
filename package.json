@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-validatable",
-  "version": "0.19.2",
+  "version": "0.19.3",
   "description": "Typescript validatable",
   "dependencies": {
     "@dikac/t-boolean": "^0.10.1",
